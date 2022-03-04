@@ -13,10 +13,19 @@ class Application extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'vazir'),
       home: Scaffold(
+        appBar: getAppBar(),
         body: SafeArea(
           child: Text('امیراحمدادیبی'),
         ),
       ),
     );
   }
+}
+
+PreferredSizeWidget getAppBar() {
+  return AppBar(
+    elevation: 0,
+    backgroundColor: Colors.red,
+    title: Text('امیراحمدادیبی'),
+  );
 }
