@@ -65,7 +65,9 @@ class Application extends StatelessWidget {
         SizedBox(
           height: 12,
         ),
-        _getRowIcons()
+        _getRowIcons(),
+        SizedBox(height: 12),
+        _getSkillLables()
       ],
     );
   }
@@ -95,73 +97,30 @@ class Application extends StatelessWidget {
           onPressed: () {},
           icon: FaIcon(FontAwesomeIcons.githubSquare),
           color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: FaIcon(FontAwesomeIcons.githubSquare),
-          color: Colors.blueGrey,
-        ),
+        )
       ],
+    );
+  }
+
+  Widget _getSkillLables() {
+    return Card(
+      elevation: 6,
+      shadowColor: Colors.red,
+      child: Column(
+        children: [
+          Container(
+            height: 80.0,
+            width: 80.0,
+            child: Image(
+              image: AssetImage('images/android.png'),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(8),
+            child: Text('Android'),
+          )
+        ],
+      ),
     );
   }
 }
