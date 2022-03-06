@@ -54,7 +54,9 @@ class Application extends StatelessWidget {
         ),
         SizedBox(height: 15),
         Text(
-            'عاشق برنامه‌نویسی موبایل اندروید و فلاتر. دوست داریم هرچیزی یادمیگرم رو یادبدم')
+          'عاشق برنامه‌نویسی موبایل اندروید و فلاتر. دوست داریم هرچیزی یادمیگرم رو یادبدم',
+          textAlign: TextAlign.center,
+        )
       ],
     );
   }
