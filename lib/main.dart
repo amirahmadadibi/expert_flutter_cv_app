@@ -33,7 +33,11 @@ class Application extends StatelessWidget {
   Widget _getMainBody() {
     return SingleChildScrollView(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(
+            width: double.infinity,
+          ),
           _getHeader(),
         ],
       ),
@@ -67,8 +71,10 @@ class Application extends StatelessWidget {
   }
 
   Widget _getRowIcons() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Wrap(
+      runSpacing: 20.0,
+      spacing: 20.0,
+      alignment: WrapAlignment.center,
       children: [
         IconButton(
           onPressed: () {},
@@ -83,6 +89,71 @@ class Application extends StatelessWidget {
         IconButton(
           onPressed: () {},
           icon: FaIcon(FontAwesomeIcons.telegram),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
           color: Colors.blueGrey,
         ),
         IconButton(
