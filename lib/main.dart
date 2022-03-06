@@ -103,24 +103,107 @@ class Application extends StatelessWidget {
   }
 
   Widget _getSkillLables() {
-    return Card(
-      elevation: 6,
-      shadowColor: Colors.red,
-      child: Column(
-        children: [
-          Container(
-            height: 80.0,
-            width: 80.0,
-            child: Image(
-              image: AssetImage('images/android.png'),
-            ),
+    return Wrap(
+      spacing: 8,
+      runSpacing: 16,
+      alignment: WrapAlignment.center,
+      children: [
+        Card(
+          elevation: 6,
+          shadowColor: Colors.red,
+          child: Column(
+            children: [
+              Container(
+                height: 80.0,
+                width: 80.0,
+                child: Image(
+                  image: AssetImage('images/android.png'),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('Android'),
+              )
+            ],
           ),
-          Padding(
-            padding: EdgeInsets.all(8),
-            child: Text('Android'),
-          )
-        ],
-      ),
+        ),
+        Card(
+          elevation: 6,
+          shadowColor: Colors.red,
+          child: Column(
+            children: [
+              Container(
+                height: 80.0,
+                width: 80.0,
+                child: Image(
+                  image: AssetImage('images/flutter.png'),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('flutter'),
+              )
+            ],
+          ),
+        ),
+        Card(
+          elevation: 6,
+          shadowColor: Colors.red,
+          child: Column(
+            children: [
+              Container(
+                height: 80.0,
+                width: 80.0,
+                child: Image(
+                  image: AssetImage('images/java.png'),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('java'),
+              )
+            ],
+          ),
+        ),
+        Card(
+          elevation: 6,
+          shadowColor: Colors.red,
+          child: Column(
+            children: [
+              Container(
+                height: 80.0,
+                width: 80.0,
+                child: Image(
+                  image: AssetImage('images/dart.png'),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('dart'),
+              )
+            ],
+          ),
+        ),
+        Card(
+          elevation: 6,
+          shadowColor: Colors.red,
+          child: Column(
+            children: [
+              Container(
+                height: 80.0,
+                width: 80.0,
+                child: Image(
+                  image: AssetImage('images/kotlin.png'),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('Android'),
+              )
+            ],
+          ),
+        )
+      ],
     );
   }
 }
