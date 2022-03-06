@@ -13,89 +13,38 @@ class Application extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'vazir'),
       home: Scaffold(
-        appBar: getAppBar(),
+        appBar: _getAppBar(),
         body: SafeArea(
-          child: getMainBody(),
+          child: _getMainBody(),
         ),
       ),
     );
   }
-}
 
-PreferredSizeWidget getAppBar() {
-  return AppBar(
-    elevation: 0,
-    backgroundColor: Colors.red,
-    title: Text('امیراحمدادیبی'),
-  );
-}
+  PreferredSizeWidget _getAppBar() {
+    return AppBar(
+      elevation: 0,
+      backgroundColor: Colors.red,
+      title: Text('امیراحمدادیبی'),
+    );
+  }
 
-Widget getMainBody() {
-  return SingleChildScrollView(
-    child: Column(
-      children: [
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-        Text('AmirahmadAdibi'),
-      ],
-    ),
-  );
+  Widget _getMainBody() {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          SizedBox(height: 20),
+          CircleAvatar(
+            backgroundImage: AssetImage('images/user.png'),
+            radius: 70,
+          ),
+          SizedBox(height: 15),
+          Text('امیراحمدام یه برنامه‌نویس و معلم'),
+          SizedBox(height: 15),
+          Text(
+              'عاشق برنامه‌نویسی موبایل اندروید و فلاتر. دوست داریم هرچیزی یادمیگرم رو یادبدم')
+        ],
+      ),
+    );
+  }
 }
