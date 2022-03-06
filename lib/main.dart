@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(Application());
@@ -56,7 +57,39 @@ class Application extends StatelessWidget {
         Text(
           'عاشق برنامه‌نویسی موبایل اندروید و فلاتر. دوست داریم هرچیزی یادمیگرم رو یادبدم',
           textAlign: TextAlign.center,
-        )
+        ),
+        SizedBox(
+          height: 12,
+        ),
+        _getRowIcons()
+      ],
+    );
+  }
+
+  Widget _getRowIcons() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.linkedin),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.instagramSquare),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.telegram),
+          color: Colors.blueGrey,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: FaIcon(FontAwesomeIcons.githubSquare),
+          color: Colors.blueGrey,
+        ),
       ],
     );
   }
