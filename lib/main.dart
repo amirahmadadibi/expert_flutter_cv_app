@@ -67,7 +67,17 @@ class Application extends StatelessWidget {
         ),
         _getRowIcons(),
         SizedBox(height: 12),
-        _getSkillLables()
+        _getSkillTitle()
+      ],
+    );
+  }
+
+  Widget _getSkillTitle() {
+    var list = ['Flutter', 'Android', 'Kotlin', 'Java', 'Dart'];
+    return Wrap(
+      children: [
+        for (var skill in list)
+          Padding(padding: EdgeInsets.all(20.0), child: Text('$skill')),
       ],
     );
   }
