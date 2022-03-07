@@ -67,17 +67,34 @@ class Application extends StatelessWidget {
         ),
         _getRowIcons(),
         SizedBox(height: 12),
-        _getSkillTitle()
+        _getSkillCards()
       ],
     );
   }
 
-  Widget _getSkillTitle() {
-    var list = ['Flutter', 'Android', 'Kotlin', 'Java', 'Dart'];
+  Widget _getSkillCards() {
+    var list = ['flutter', 'android', 'kotlin', 'java', 'dart'];
     return Wrap(
       children: [
         for (var skill in list)
-          Padding(padding: EdgeInsets.all(20.0), child: Text('$skill')),
+          Card(
+            elevation: 6,
+            child: Column(
+              children: [
+                Container(
+                  height: 80.0,
+                  child: Image(
+                    image: AssetImage('images/$skill.png'),
+                    width: 60.0,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8),
+                  child: Text('$skill'),
+                )
+              ],
+            ),
+          )
       ],
     );
   }
@@ -107,111 +124,6 @@ class Application extends StatelessWidget {
           onPressed: () {},
           icon: FaIcon(FontAwesomeIcons.githubSquare),
           color: Colors.blueGrey,
-        )
-      ],
-    );
-  }
-
-  Widget _getSkillLables() {
-    return Wrap(
-      spacing: 8,
-      runSpacing: 16,
-      alignment: WrapAlignment.center,
-      children: [
-        Card(
-          elevation: 6,
-          shadowColor: Colors.red,
-          child: Column(
-            children: [
-              Container(
-                height: 80.0,
-                width: 80.0,
-                child: Image(
-                  image: AssetImage('images/android.png'),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(8),
-                child: Text('Android'),
-              )
-            ],
-          ),
-        ),
-        Card(
-          elevation: 6,
-          shadowColor: Colors.red,
-          child: Column(
-            children: [
-              Container(
-                height: 80.0,
-                width: 80.0,
-                child: Image(
-                  image: AssetImage('images/flutter.png'),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(8),
-                child: Text('flutter'),
-              )
-            ],
-          ),
-        ),
-        Card(
-          elevation: 6,
-          shadowColor: Colors.red,
-          child: Column(
-            children: [
-              Container(
-                height: 80.0,
-                width: 80.0,
-                child: Image(
-                  image: AssetImage('images/java.png'),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(8),
-                child: Text('java'),
-              )
-            ],
-          ),
-        ),
-        Card(
-          elevation: 6,
-          shadowColor: Colors.red,
-          child: Column(
-            children: [
-              Container(
-                height: 80.0,
-                width: 80.0,
-                child: Image(
-                  image: AssetImage('images/dart.png'),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(8),
-                child: Text('dart'),
-              )
-            ],
-          ),
-        ),
-        Card(
-          elevation: 6,
-          shadowColor: Colors.red,
-          child: Column(
-            children: [
-              Container(
-                height: 80.0,
-                width: 80.0,
-                child: Image(
-                  image: AssetImage('images/kotlin.png'),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(8),
-                child: Text('Android'),
-              )
-            ],
-          ),
         )
       ],
     );
