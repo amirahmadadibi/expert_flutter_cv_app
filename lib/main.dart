@@ -67,8 +67,39 @@ class Application extends StatelessWidget {
         ),
         _getRowIcons(),
         SizedBox(height: 12),
-        _getSkillCards()
+        _getSkillCards(),
+        SizedBox(height: 12),
+        _getResume()
       ],
+    );
+  }
+
+  Widget _getResume() {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+      width: double.infinity,
+      color: Colors.grey[200],
+      child: Column(
+        children: [
+          Text(
+            'سابقه کاری من',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              SizedBox(width: double.infinity),
+              Text('برنامه‌نویس اندروید زرین‌پال از سال ۹۷'),
+              Text('هشت ترم ورک‌‌شاپ عملی اندروید دانشگاه تهران'),
+              Text('چنل آموزشی یوتوب از سال ۲۰۱۷'),
+              Text('(Iran cs50x)مدرس دوره اندروید هاروارد'),
+              Text('اموزش برنامه‌نویسی اندروید از سال ۹۳'),
+              Text('ExpertFlutter مدرس و بنیان‌گذار سایت'),
+            ],
+          )
+        ],
+      ),
     );
   }
 
