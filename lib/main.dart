@@ -38,13 +38,13 @@ class Application extends StatelessWidget {
           SizedBox(
             width: double.infinity,
           ),
-          _getHeader(),
+          _getMainContent(),
         ],
       ),
     );
   }
 
-  Widget _getHeader() {
+  Widget _getMainContent() {
     return Column(
       children: [
         SizedBox(height: 20),
@@ -76,7 +76,7 @@ class Application extends StatelessWidget {
 
   Widget _getResume() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       width: double.infinity,
       color: Colors.grey[200],
       child: Column(
@@ -86,20 +86,34 @@ class Application extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              SizedBox(width: double.infinity),
-              Text('برنامه‌نویس اندروید زرین‌پال از سال ۹۷'),
-              Text('هشت ترم ورک‌‌شاپ عملی اندروید دانشگاه تهران'),
-              Text('چنل آموزشی یوتوب از سال ۲۰۱۷'),
-              Text('(Iran cs50x)مدرس دوره اندروید هاروارد'),
-              Text('اموزش برنامه‌نویسی اندروید از سال ۹۳'),
-              Text('ExpertFlutter مدرس و بنیان‌گذار سایت'),
-            ],
-          )
+          _getHistoryColumn()
         ],
       ),
+    );
+  }
+
+  Widget _getHistoryColumn() {
+    var list = [
+      'برنامه‌نویس اندروید زرین‌پال از سال ۹۷',
+      'هشت ترم ورک‌‌شاپ عملی اندروید دانشگاه تهران',
+      'چنل آموزشی یوتوب از سال ۲۰۱۷',
+      'مدرس دوره اندروید هاروارد (Iran cs50x)',
+      'اموزش برنامه‌نویسی اندروید از سال ۹۳',
+      'مدرس و عشق دمنده ExpertFlutter'
+    ];
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        SizedBox(
+          width: double.infinity,
+          height: 20,
+        ),
+        for (var title in list)
+          Text(
+            title,
+            textDirection: TextDirection.rtl,
+          )
+      ],
     );
   }
 
